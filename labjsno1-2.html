@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+       let student = [
+{
+fullname: 'นายตั้งใจ เรียนมาก',
+age: 18,
+year: 1,
+gpa: 3.40,
+help: true
+},
+{
+fullname: 'นายส่งงาน ตลอดมา',
+age: 19,
+year: 2,
+gpa: 3.00,
+help: false
+},
+{
+fullname: 'นางสาวใส่ใจ งดงาม',
+age: 20,
+year: 3,
+gpa: 2.90,
+help: true
+},
+{
+fullname: 'นางสาวเจนนี่ คิม',
+age: 21,
+year: 4,
+gpa: 3.90,
+help: true
+},
+{
+fullname: 'นางสาวโรแซน ปาร์ค',
+age: 20,
+year: 2,
+gpa: 2.80,
+help: false
+},
+{
+fullname: 'นางสาวยุนอา อิม',
+age: 20,
+year: 2,
+gpa: 3.21,
+help: false
+}
+,
+{
+fullname: 'นางสาวแทยอน ออนนี',
+age: 22,
+year: 3,
+gpa: 2.80,
+help: false
+}
+,
+{
+fullname: 'นางสาวไอรีน เบ',
+age: 23,
+year: 4,
+gpa: 2.00,
+help: false
+}
+,
+{
+fullname: 'นายชิตพล ลี้ชัยพรกุล',
+age: 21,
+year: 2,
+gpa: 3.20,
+help: false
+}
+,
+{
+fullname: 'นายอเล็กซานเดอร์ หล่า',
+age: 23,
+year: 4,
+gpa: 3.20,
+help: false
+}
+]
+let currentyear = 2565
+
+for (let i =0; i<student.length;i++){
+        if(student[i].gpa>=3.20){
+            if(student[i].help==true){
+            console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) +' ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย');
+        }
+            else{
+            console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) + " ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์");
+            }
+        }
+        else if(student[i].year>=2 && student[i].gpa>=2.75){
+            if(student[i].help == true && student[i].gpa > 2.75){
+                            console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) + " ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และช่วยงานภาควิชาด้วย");
+                        }
+                    else{
+                        
+                        console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) + " ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์แต่ไม่ได้ช่วยงานภาควิชา");
+                    }
+             }
+        else if(student[i].year>=2 && student[i].gpa<2.75){
+            if(student[i].help==true){
+                console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) + " ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์แต่มีการช่วยงานภาควิชา");
+             }
+             else{
+                console.log(student[i].fullname +" เกิดเมื่อปี "+ (currentyear - student[i].age ) + " ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และไม่ได้ช่วยงานภาควิชา");
+                   
+             }
+        }
+             
+            }
+
+
+
+    </script>
+</head>
+<body>
+<h1>Labjs1-2</h1>
+</body>
+</html>
